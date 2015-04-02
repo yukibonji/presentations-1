@@ -8,4 +8,6 @@
 
 ### Presentations
 
-[RUN Suggestions](2015-04-02-run-suggestions.html)
+<ul class="fragment roll-in">
+<li><a href="2015-04-02-run-suggestions.html">RUN Suggestions</a></li>
+</ul>

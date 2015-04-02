@@ -19,7 +19,12 @@
 
 <p class="fragment roll-in">Took on a spectator role to see the current situation</p>
 
----
+<ul>
+<li class="fragment roll-in">Project diversity</li>
+<li class="fragment roll-in">Project quality</li>
+</ul>
+
+***
 
 ### Project diversity
 
@@ -32,7 +37,7 @@
 <li class="fragment roll-in">Responding to anomalies</li>
 </ul>
 
-***
+---
 
 ### Building the project
 
@@ -98,3 +103,147 @@
 </ul>
 
 <p class="fragment roll-in">All of this eventually goes into production!</p>
+
+---
+
+### Documentation
+
+<p class="fragment roll-in">Documentation is currently:</p>
+
+<ul>
+<li class="fragment roll-in">Not present at all...</li>
+<li class="fragment roll-in">Text files<span class="fragment roll-in">, Word</span></li>
+<li class="fragment roll-in">Sharepoint<span class="fragment roll-in">, Athena</span></li>
+</ul>
+
+---
+
+### Coding practices
+
+<ul>
+<li class="fragment roll-in">Different skill levels</li>
+<li class="fragment roll-in">Different review practices
+<ul>
+<li class="fragment roll-in">No reviews at all...</li>
+<li class="fragment roll-in">Half yearly review</li>
+<li class="fragment roll-in">Peer review</li>
+</ul></li>
+</ul>
+
+---
+
+### Testing practices
+
+<p class="fragment roll-in">Several variations of testing exists:</p>
+
+<ul>
+<li class="fragment roll-in">Manual testing</li>
+<li class="fragment roll-in">Unit tests</li>
+<li class="fragment roll-in">Integration tests</li>
+</ul>
+
+<p class="fragment roll-in">These are either run manually, or automated</p>
+
+---
+
+### Monitoring
+
+<p class="fragment roll-in">Monitoring exists, this is either:</p>
+
+<ul>
+<li class="fragment roll-in">Minimally implemented</li>
+<li class="fragment roll-in">Implemented only on an infrastructure level</li>
+<li class="fragment roll-in">Functionally implemented</li>
+</ul>
+
+---
+
+### Debugging
+
+<p class="fragment roll-in">To find out information about a system there is:</p>
+
+<ul>
+<li class="fragment roll-in">Nothing foreseen</li>
+<li class="fragment roll-in">Basic documentation with SQL queries</li>
+<li class="fragment roll-in">Log files</li>
+<li class="fragment roll-in">Dedicated debug screens</li>
+</ul>
+
+***
+
+### Suggestions
+
+<p class="fragment roll-in">Successful approaches from various projects</p>
+
+<ul>
+<li class="fragment roll-in">Project management</li>
+<li class="fragment roll-in">Project follow-up</li>
+<li class="fragment roll-in">Project quality</li>
+</ul>
+
+***
+
+### Project Management
+
+<p class="fragment roll-in">Provide dependable ways to build and deploy</p>
+
+<ul>
+<li class="fragment roll-in">Avoids human error</li>
+<li class="fragment roll-in">Avoids slight deviations</li>
+<li class="fragment roll-in">Increases trust in project</li>
+<li class="fragment roll-in">Facilitate easier maintenance</li>
+</ul>
+
+---
+
+### Building
+
+<p class="fragment roll-in">Provide a limited set of supported choices which:</p>
+
+<ul>
+<li class="fragment roll-in">Should be able to fetch and build successfully</li>
+<li class="fragment roll-in">Should be able to run automatically by build server</li>
+</ul>
+
+<p class="fragment roll-in">Having this in place will facilitate:</p>
+
+<ul>
+<li class="fragment roll-in">Easier maintenance</li>
+<li class="fragment roll-in">Better developer introduction/handover</li>
+</ul>
+
+---
+
+### Deploying
+
+<p class="fragment roll-in">Provide single deployment strategy</p>
+
+<ul>
+<li class="fragment roll-in">No manual deployments</li>
+<li class="fragment roll-in">Support different environments</li>
+<li class="fragment roll-in">Support quick feedback loop</li>
+</ul>
+
+<p class="fragment roll-in">Facilitates trust in deployed versions</p>
+
+***
+
+### Project Follow-up
+
+<p class="fragment roll-in">Provide clear and user-friendly way to:</p>
+
+<ul>
+<li class="fragment roll-in">Get project status<span class="fragment roll-in"> (Scrum / Kanban)</span></li>
+<li class="fragment roll-in">Keep track of internal progress</li>
+<li class="fragment roll-in">Link progress to code and deployment</li>
+</ul>
+
+***
+
+### Project Quality
+
+<p class="fragment roll-in">Reviews are currently done by people who will not maintain it</p>
+
+<p class="fragment roll-in">Involvement is not continuous and too late</p>
+
+<p class="fragment roll-in">No feedback to increase skill levels</p>
