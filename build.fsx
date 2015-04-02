@@ -9,10 +9,10 @@
 
 // Git configuration (used for publishing documentation in gh-pages branch)
 // The profile where the project is posted
-let gitOwner = "myGitUser"
+let gitOwner = "cumpsd"
 let gitHome = "https://github.com/" + gitOwner
 // The name of the project on GitHub
-let gitProjectName = "MyProject"
+let gitProjectName = "presentations"
 
 open FsReveal
 open Fake
@@ -42,17 +42,17 @@ let copyPics() =
       !! (slidesDir @@ "images/*.*")
       |> CopyFiles (outDir @@ "images")
     with
-    | exn -> traceImportant <| sprintf "Could not copy picture: %s" exn.Message    
+    | exn -> traceImportant <| sprintf "Could not copy picture: %s" exn.Message
 
-let generateFor (file:FileInfo) = 
+let generateFor (file:FileInfo) =
     try
         copyPics()
         let rec tryGenerate trials =
             try
-                FsReveal.GenerateFromFile outDir file.FullName                
-            with 
+                FsReveal.GenerateFromFile outDir file.FullName
+            with
             | exn when trials > 0 -> tryGenerate (trials - 1)
-            | exn -> 
+            | exn ->
                 traceImportant <| sprintf "Could not generate slides for: %s" file.FullName
                 traceImportant exn.Message
 
@@ -64,14 +64,14 @@ let generateFor (file:FileInfo) =
         traceImportant <| sprintf "Could not copy file: %s" exn.FileName
 
 let handleWatcherEvents (e:FileSystemEventArgs) =
-    let fi = fileInfo e.FullPath 
+    let fi = fileInfo e.FullPath
     traceImportant <| sprintf "%s was changed." fi.Name
     match fi.Attributes.HasFlag FileAttributes.Hidden || fi.Attributes.HasFlag FileAttributes.Directory with
             | true -> ()
             | _ -> generateFor fi
 
 let startWebServer () =
-    let serverConfig = 
+    let serverConfig =
         { defaultConfig with
            homeFolder = Some (FullName outDir)
         }
@@ -128,5 +128,5 @@ Target "ReleaseSlides" (fun _ ->
 
 "GenerateSlides"
   ==> "ReleaseSlides"
-  
+
 RunTargetOrDefault "KeepRunning"
